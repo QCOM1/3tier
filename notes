@@ -1,0 +1,188 @@
+ sudo apt-get install gnupg
+    wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+    echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.2 main" | sudo tee /etc/apt/sources.list.d/mongodb.list
+    apt-get update
+    sudo apt install mongodb-org -y
+    sudo systemctl enable mongod
+    sudo systemctl start mongod
+    sudo systemctl status mongod
+    mongo admin --eval 'db.createUser( { user: "superadmin", pwd: "MyPass1234", roles: [ { role: "clusterAdmin", db: "admin" }, { role: "userAdminAnyDatabase", db: "admin" } ] } )'
+    mongo admin --eval 'db.createUser( { user: "todo", pwd: "todo", roles: [ { role: "readWrite", db: "test" } ] } )'
+	mongo -u superadmin -p MyPass1234 -authenticationDatabase admin
+    mongo -u  todo -p todo -authenticationDatabase admin
+	
+	
+	
+	24  vim  /etc/mongod.conf
+   25  systemctl status mongod
+   26  systemctl stop  mongod
+   27  systemctl status mongod
+   28  systemctl start  mongod
+   29  systemctl status mongod
+   30  sudo netstat -plntu
+   31  mongo admin --eval 'db.createUser( { user: "todo", pwd: "todo", roles: [ { role: "readWrite", db: "test" } ] } )'
+   32  apt-get install -y python3-pip
+   33  pip install -y pymongo
+   34  apt install -y pymongo
+   35  pip install -y pymongo
+   36  apt-get install -y python-pip
+   37  pip install -y pymongo
+   38  pip install  pymongo
+
+   
+   
+   
+   
+   
+   
+    1  yum install epel-release
+    2  sudo amazon-linux-extras install epel
+    3  yum install golang
+    4  yum install golang
+    5   yum install hg
+    6   yum install hg
+    7  vim hello.go
+    8  go run hello.go
+    9  export GOPATH=$HOME/go
+   10  export PATH=$PATH:$GOPATH/bin
+   11  go get github.com/go-sql-driver/mysql
+   12  git clone https://github.com/kubernetes-tn/go-to-do-app.git
+   13  yum install -y git
+   14  git clone https://github.com/kubernetes-tn/go-to-do-app.git
+   15  ll
+   16  cd go-to-do-app/
+   17  mkdir tmp
+   18  go build -o tmp
+   19  ll
+   20  cd server/
+   21  go build -o tmp
+   22  cd ../client/
+   23  go build -o tmp
+   24  cd ..
+   25  cd server/
+   26  source /etc/profile;go build -o /tmp/todo
+   27  xport PATH=$PATH:$GOPATH/bin
+   28  export PATH=$PATH:$GOPATH/bin
+   29  source /etc/profile;go build -o /tmp/todo
+   30  go get github.com/gorilla/mux
+   31  go get github.com/mongo-driver/mongo
+   32  go get github.com/mongo-driver/bson
+   33  go get go.mongodb.org/mongo-driver/mongo
+   34  source /etc/profile;go build -o /tmp/todo
+   35  ll /tmp/todo
+   36  du -sh /tmp/todo
+   37  history
+
+
+   
+   [root@ip-172-31-76-52 server]# export DB_CONNECTION=mongodb://todo:todo@172.31.77.72:27017
+[root@ip-172-31-76-52 server]# export DB_NAME=test
+[root@ip-172-31-76-52 server]# /tmp/todo
+Connected to MongoDB!
+Collection instance created!
+Starting server on the port 8080...
+
+
+
+
+root@ip-172-31-76-52 client]# history
+    1  npm install
+    2  npm start
+    3  npm run build
+    4    serve -s build
+    5  history
+
+	
+	 132  curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+  133  sudo yum install nodejs
+  134  node --version
+  135  pwd
+  136  ll
+  137  cd ../client/
+  138  ll
+  139  npm install .
+  140  npm audit fix
+  141  ll
+  142  ll node_modules
+  143  npm start
+  144  npm update
+  145  npm audit fix
+  146  ll/tmp/todo &
+  147  /tmp/todo &
+  148  npm start
+  149  npm build .
+  150  npm run build
+  151  curl http://myname.github.io/myapp
+  152   npm install -g serve
+  153    serve -s build
+  154  pwd
+  155  cim .env
+  156  vim .env
+  157  history
+  158  npm install -g serve;serve -s build
+  159  npm install
+  160  npm start
+  161  npm install -g serve;serve -s build
+  162  npm build
+  163  npm run build
+  164  npm update
+  165  npm install -g serve;serve -s build
+  166  cat .env
+  167  ping 3.236.13.6
+  168  npm install -g serve;serve -s build
+  169  nvm install
+  170  pwd
+  171  history
+  172  sudo yum install gcc-c++ make -y
+  173  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  174  export NVM_DIR="$HOME/.nvm"
+  175  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  176  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  177  nvm install node
+  178  nvm install --lts
+  179  nvm install .
+  180  ll
+  181  npm clean
+  182  npm install
+  183  npm start
+  184  npm install pm2 -g
+  185  pm2 start node_modules/react-scripts/scripts/start.js --name todo
+  186  pm2 start app.js
+  187  ps -aef | grep todo
+  188  pm2 start node_modules/react-scripts/scripts/start.js --name todo
+  189  netstat -ntlp
+  190  npm build
+  191  npm run-script build
+  192  npm install -g serve
+  193    serve -s build
+  194  cd ../server/
+  195  go run main.go
+  196  netstat -ntlp
+  197  ps -aef | grep todo
+  198  kill -9 2933
+  199  go run main.go
+  200  go run main.go &
+  201  cd ../client/
+  202  npm install
+  203  npm start
+  204  netstat -tulpn
+  205  ps -aef | grep -in node
+  206  kill -9 5501
+  207  ps -aef | grep -in node
+  208  kill -9 5501 6046  5490
+  209  ps -aef | grep -in node
+  210  netstat -tulpn
+  211  yum install -y elinks
+  212  elinks http://localhost:3000/
+  213  http://172.31.76.52:3000/
+  214  elinks http://172.31.76.52:3000/
+  215  pwd
+  216  cd ../1
+  217  cd ..
+  218  cd 1
+  219  cd go-to-do-app/
+  220  vim client/.env
+  221  ll
+  222  cp  /home/ec2-user/go-to-do-app/client/.env .
+  223  ll
+  224  mv .env client/
